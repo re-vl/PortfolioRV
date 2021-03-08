@@ -1,0 +1,21 @@
+@mixin h1-style {
+   font-size: 3rem;
+}
+
+@mixin h2-style {
+   font-size: 1.5rem;
+}
+
+@mixin before_circle {
+   &:before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: -25%;
+      left: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 100%;
+      background: $main-color;
+   }
+}

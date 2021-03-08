@@ -1,0 +1,42 @@
+.contacts {
+   padding: 3rem 2rem;
+   background-color: $bg-color;
+   h2,
+   h3 {
+      text-align: center;
+   }
+   &__wrap {
+      margin-top: 3rem;
+      display: grid;
+      grid-template: 1fr/1fr 1fr;
+      gap: 2rem;
+   }
+   a {
+      img {
+         margin: 2rem 1rem;
+         max-height: 3rem;
+      }
+   }
+   &__form-subgrid {
+      margin-top: 2rem;
+      display: grid;
+      grid-template: 1fr/1fr 1fr;
+      gap: 1rem;
+   }
+   &__subinput {
+      input {
+         height: 2rem;
+         width: 100%;
+         padding: 0 0.5rem;
+         font-size: 0.8rem;
+      }
+   }
+   &__textarea {
+      textarea {
+         height: 5rem;
+         width: 100%;
+         padding: 0.5rem;
+         font-size: 0.8rem;
+      }
+   }
+}

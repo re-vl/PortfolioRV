@@ -1,0 +1,29 @@
+.nav {
+   &__wrap {
+      display: flex;
+      justify-content: space-between;
+      background: #ffffff;
+   }
+   &__logo {
+      width: 5.6rem;
+      img {
+         width: 94%;
+      }
+   }
+   &__menu {
+      margin: auto 0;
+      width: 50%;
+      ul {
+         margin: auto 0;
+         display: flex;
+         list-style-type: none;
+         justify-content: flex-end;
+         li {
+            margin: 0 3%;
+            a {
+               color: $main-text-color;
+            }
+         }
+      }
+   }
+}

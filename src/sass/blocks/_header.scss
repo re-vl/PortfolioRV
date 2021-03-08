@@ -1,0 +1,25 @@
+.header {
+   height: 100vh;
+   background: url("../../img/home_bg.JPG") top center/cover no-repeat;
+   color: #fff;
+   padding: 10rem 1rem;
+   h1 {
+      @include h1-style;
+   }
+   h2 {
+      @include h2-style;
+   }
+
+   ul {
+      margin: 2rem auto;
+      height: 5rem;
+      display: flex;
+      list-style-type: none;
+      li {
+         margin-right: 2%;
+         img {
+            max-height: 3rem;
+         }
+      }
+   }
+}

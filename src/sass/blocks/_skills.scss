@@ -1,0 +1,25 @@
+.skills {
+   padding: 3rem 1rem;
+   background-color: $bg-color;
+   &__wrap {
+      display: grid;
+      margin-top: 4rem;
+      grid-template: 1fr / repeat(3, 1fr);
+      gap: 3rem;
+      text-align: justify;
+   }
+   &__item {
+      h3 {
+         margin-top: 1rem;
+      }
+      p {
+         color: $main-text-color;
+      }
+   }
+   &__header {
+      h2,
+      h3 {
+         text-align: center;
+      }
+   }
+}
