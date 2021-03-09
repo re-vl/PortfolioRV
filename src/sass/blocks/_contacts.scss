@@ -18,6 +18,7 @@
       }
    }
    &__form-subgrid {
+      position: relative;
       margin-top: 2rem;
       display: grid;
       grid-template: 1fr/1fr 1fr;
@@ -30,13 +31,44 @@
          padding: 0 0.5rem;
          font-size: 0.8rem;
       }
+      label {
+         position: relative;
+         top: -44%;
+         left: 3%;
+         opacity: 0.7;
+      }
+      input:focus ~ label,
+      label:active {
+         top: -80%;
+         opacity: 1;
+         color: $main-color;
+         background-color: $bg-color;
+         font-size: 0.8rem;
+         transition: 0.5s;
+      }
    }
    &__textarea {
+      position: relative;
       textarea {
          height: 5rem;
          width: 100%;
          padding: 0.5rem;
          font-size: 0.8rem;
+      }
+      label {
+         position: absolute;
+         top: 8%;
+         left: 2%;
+         opacity: 0.7;
+      }
+      textarea:focus ~ label,
+      label:active {
+         top: -17%;
+         opacity: 1;
+         color: $main-color;
+         background-color: $bg-color;
+         font-size: 0.8rem;
+         transition: 0.5s;
       }
    }
 }
