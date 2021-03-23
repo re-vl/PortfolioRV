@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="195.00017mm"
+   height="30.962181mm"
+   viewBox="0 0 195.00017 30.962181"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="rv_logo_inscription.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="-33.916722"
+     inkscape:cy="128.20715"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Слой 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-6.748264,-121.22167)">
+    <text
+       xml:space="preserve"
+       style="font-size:27.7937px;line-height:0;font-family:Akrobat;-inkscape-font-specification:Akrobat;letter-spacing:0px;stroke-width:0.579034;fill:#b8a07e;fill-opacity:1;"
+       x="5.914453"
+       y="142.67841"
+       id="text835"><tspan
+         sodipodi:role="line"
+         id="tspan833"
+         x="5.914453"
+         y="142.67841"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Marck Script';-inkscape-font-specification:'Marck Script';stroke-width:0.579034;fill:#b8a07e;fill-opacity:1;">RV-Web Developer</tspan></text>
+  </g>
+</svg>

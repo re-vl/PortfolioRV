@@ -4,7 +4,7 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <title>RV-WEB-DEV</title>
+      <title>ReVla</title>
       <meta name="title" content="Мое портфолио" />
       <meta
          name="description"
@@ -118,30 +118,33 @@
       <link rel="stylesheet" href="css/style.min.css" />
    </head>
    <body>
-      <nav class="nav">
+      <nav class="nav hide">
          <div class="container">
             <div class="nav__wrap">
                <div class="nav__logo">
                   <img src="icons/rv_logo.svg" alt="logo" />
                </div>
+               <div class="nav__logoinscr">
+                  <img src="icons/rv_logo_inscription.svg" alt="logo" />
+               </div>
                <div class="nav__menu">
                   <ul>
-                     <li><a href="#">Главная</a></li>
-                     <li><a href="#">Про меня</a></li>
-                     <li><a href="#">Мои работы</a></li>
-                     <li><a href="#">Контакты</a></li>
+                     <li><a href="#header">Главная</a></li>
+                     <li><a href="#about">Про меня</a></li>
+                     <li><a href="#portfolio">Мои работы</a></li>
+                     <li><a href="#contacts">Контакты</a></li>
                   </ul>
                </div>
             </div>
          </div>
       </nav>
 
-      <section class="header">
+      <section class="header" id="header">
          <div class="container">
             <div class="header__wrap">
                <h2>Рад приветствовать Вас на моем сайте!</h2>
-               <h1>Я <span class="typed"></span></h1>
-               <h2>Веб - Разработчик</h2>
+               <h1>Я <span id="typed"></span></h1>
+
                <ul>
                   <li>
                      <a href="#">
@@ -150,12 +153,12 @@
                   </li>
                   <li>
                      <a href="#">
-                        <img src="icons/social/instagram.svg" alt="instagram" />
+                        <img src="icons/social/telegram.svg" alt="telegram" />
                      </a>
                   </li>
                   <li>
                      <a href="#">
-                        <img src="icons/social/telegram.svg" alt="telegram" />
+                        <img src="icons/social/email.svg" alt="email" />
                      </a>
                   </li>
                </ul>
@@ -163,7 +166,7 @@
          </div>
       </section>
 
-      <section class="about">
+      <section class="about" id="about">
          <div class="container">
             <div class="about__header">
                <h2>Про меня</h2>
@@ -352,7 +355,7 @@
          </div>
       </section>
 
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
          <div class="container">
             <h3>Портфолио</h3>
             <h2>Мои работы</h2>
@@ -380,7 +383,7 @@
          </div>
       </section>
 
-      <section class="contacts">
+      <section class="contacts" id="contacts">
          <div class="container">
             <div class="contacts__descr">
                <h3>Контакты</h3>
@@ -391,45 +394,71 @@
                <div class="contacts__item">
                   <h4>Любым удобным для вас способом:</h4>
                   <p>тел: +7(916)561-92-53</p>
-                  <p>
-                     <a href="mailto:rva7171@gmail.com?subject=answer">
-                        email: rva7171@gmail.com</a
-                     >
-                  </p>
 
-                  <a href="#" class="contacts__link">
-                     <img src="icons/social/facebook.svg" alt="facebook" />
-                  </a>
-                  <a href="#" class="contacts__link">
-                     <img src="icons/social/telegram.svg" alt="telegram" />
-                  </a>
-                  <a href="" class="contacts__link">
-                     <img src="icons/social/instagram.svg" alt="instagram" />
-                  </a>
+                  <ul>
+                     <li>
+                        <a href="#">
+                           <img
+                              src="icons/social/facebook.svg"
+                              alt="facebook"
+                           />
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                           <img
+                              src="icons/social/telegram.svg"
+                              alt="telegram"
+                           />
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                           <img src="icons/social/email.svg" alt="email" />
+                        </a>
+                     </li>
+                  </ul>
+                  <div class="contacts__logo">
+                     <img src="icons/rv_logo.svg" alt="logo" />
+                  </div>
                </div>
+
                <div class="contacts__item">
                   <h4>Или оставьте ваши данные и я сам вам напишу:</h4>
 
                   <form action="#" class="contacts__form">
                      <div class="contacts__form-subgrid">
                         <div class="contacts__subinput">
-                           <input required name="name" id="name" type="text" />
-                           <label for="name">Имя</label>
+                           <input
+                              type="text"
+                              name="name"
+                              placeholder="Имя*"
+                              required
+                              minlength="2"
+                           />
+                           <span class="form__error">
+                              Это поле должно содержать минимум две буквы
+                           </span>
                         </div>
                         <div class="contacts__subinput">
                            <input
-                              required
-                              name="email"
-                              id="email"
                               type="email"
+                              name="email"
+                              placeholder="E-Mail*"
+                              required
                            />
-                           <label for="email">Почта</label>
+                           <span class="form__error">
+                              Это поле должно содержать E-Mail в формате
+                              example@site.com
+                           </span>
                         </div>
                      </div>
 
                      <div class="contacts__textarea">
-                        <textarea name="text" id="text"></textarea>
-                        <label for="text">Сообщение</label>
+                        <textarea
+                           name="text"
+                           placeholder="Сообщение*"
+                        ></textarea>
                      </div>
                      <div class="contacts__triggers">
                         <button class="contacts__btn button">
@@ -439,9 +468,7 @@
                            <input required type="checkbox" />
                            <span>
                               Я согласен(а) с
-                              <a href="/policy.html">
-                                 политикой конфиденциальности
-                              </a>
+                              <a href="#"> политикой конфиденциальности </a>
                            </span>
                         </div>
                      </div>

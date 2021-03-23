@@ -11,10 +11,40 @@
       grid-template: 1fr/1fr 1fr;
       gap: 2rem;
    }
-   a {
+   ul {
+      margin: 2rem auto 0 auto;
+      height: 5rem;
+      display: flex;
+      list-style-type: none;
+      li {
+         margin-right: 3%;
+
+         img {
+            height: 3rem;
+         }
+         &:after {
+            display: block;
+            position: relative;
+            content: "";
+            top: 0.8rem;
+            left: 0.4rem;
+            width: 2.2rem;
+            height: 0.3rem;
+            border-radius: 50%;
+            background-color: $main-text-color;
+            box-shadow: (0 0 0.2rem 0.2rem $main-text-color);
+            opacity: 0;
+         }
+         &:hover:after {
+            opacity: 1;
+            transition: 2s;
+         }
+      }
+   }
+   &__logo {
+      height: 10rem;
       img {
-         margin: 2rem 1rem;
-         max-height: 3rem;
+         height: 100%;
       }
    }
    &__form-subgrid {
@@ -24,28 +54,34 @@
       grid-template: 1fr/1fr 1fr;
       gap: 1rem;
    }
+
    &__subinput {
+      margin-bottom: 1rem;
       input {
          height: 2rem;
          width: 100%;
          padding: 0 0.5rem;
          font-size: 0.8rem;
+         border: 2px solid #ccc;
       }
-      label {
-         position: relative;
-         top: -44%;
-         left: 3%;
-         opacity: 0.7;
-      }
-      input:focus ~ label,
-      label:active {
-         top: -80%;
-         opacity: 1;
-         color: $main-color;
-         background-color: $bg-color;
-         font-size: 0.8rem;
-         transition: 0.5s;
-      }
+   }
+   .form__error {
+      color: red;
+      text-align: left;
+      font-size: 0.7rem;
+      display: block;
+      margin-top: 3px;
+      display: none;
+   }
+   input:valid:not(:placeholder-shown) {
+      border-color: green;
+   }
+
+   input:invalid:not(:placeholder-shown) {
+      border-color: red;
+   }
+   input:invalid:not(:placeholder-shown) + .form__error {
+      display: block;
    }
    &__textarea {
       position: relative;
@@ -54,21 +90,7 @@
          width: 100%;
          padding: 0.5rem;
          font-size: 0.8rem;
-      }
-      label {
-         position: absolute;
-         top: 8%;
-         left: 2%;
-         opacity: 0.7;
-      }
-      textarea:focus ~ label,
-      label:active {
-         top: -17%;
-         opacity: 1;
-         color: $main-color;
-         background-color: $bg-color;
-         font-size: 0.8rem;
-         transition: 0.5s;
+         border: 2px solid #ccc;
       }
    }
 }

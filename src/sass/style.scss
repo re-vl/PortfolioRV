@@ -14,6 +14,35 @@
    padding: 0 15px;
 }
 
+.movedowd {
+   top: 0px;
+   animation: downBlock 1s linear forwards;
+}
+@keyframes downBlock {
+   0% {
+      top: -90px;
+   }
+   100% {
+      top: 0px;
+   }
+}
+
+.moveup {
+   top: -90px;
+   animation: upBlock 1s linear forwards;
+}
+@keyframes upBlock {
+   0% {
+      top: 0px;
+   }
+   100% {
+      top: -90px;
+   }
+}
+.hide {
+   display: none;
+}
+
 @import "blocks/divider";
 @import "blocks/nav";
 @import "blocks/header";
