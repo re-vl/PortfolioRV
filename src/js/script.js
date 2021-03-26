@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
       txt = "Речмедилов Владимир",
       speed1 = 200,
       speed2 = 30;
-   var i = 0,
+   let i = 0,
       backspace = false;
 
    function typeWriter() {
