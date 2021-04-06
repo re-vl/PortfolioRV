@@ -12,30 +12,25 @@ window.addEventListener("DOMContentLoaded", () => {
       }
    };
 
-   const text = document.getElementById("typed"),
-      txt = "Речмедилов Владимир",
-      speed1 = 200,
-      speed2 = 30;
-   var i = 0,
-      backspace = false;
+   // набор текста
 
-   function typeWriter() {
-      text.innerHTML = txt.substr(0, i);
+   let el = document.querySelector("#screen");
+   let source = el.textContent;
+   let length = source.length;
+   let direction = 1; // +1 or -1
+   let cursor = 0;
+   let timeout;
 
-      if (i > txt.length) {
-         backspace = true;
-      }
-      if (i == 0) {
-         backspace = false;
-      }
-      if (!backspace) {
-         i++;
-         setTimeout(typeWriter, speed1);
-      } else {
-         i--;
-         setTimeout(typeWriter, speed2);
-      }
+   function makeStep() {
+      el.textContent = source.substring(0, cursor);
+      if (cursor == length) (direction = -1), (timeout = 2000);
+      else if (cursor == 0) (direction = 1), (timeout = 2000);
+      else if (direction == 1) timeout = 100 + Math.floor(Math.random() * 100);
+      else if (direction == -1) timeout = 50;
+      cursor += direction;
+
+      setTimeout(makeStep, timeout);
    }
 
-   typeWriter();
+   makeStep();
 });
