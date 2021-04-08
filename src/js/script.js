@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
    const menu = document.querySelector(".nav");
-
+   //появление меню через 300рх
    document.onscroll = function () {
       if (document.documentElement.scrollTop > 300) {
          menu.classList.remove("moveup");
@@ -14,23 +14,45 @@ window.addEventListener("DOMContentLoaded", () => {
 
    // набор текста
 
-   let el = document.querySelector("#screen");
-   let source = el.textContent;
-   let length = source.length;
-   let direction = 1; // +1 or -1
-   let cursor = 0;
-   let timeout;
+   const t = ["Меня зовут Владимир.  ", "Я web-разработчик.  "];
 
-   function makeStep() {
-      el.textContent = source.substring(0, cursor);
-      if (cursor == length) (direction = -1), (timeout = 2000);
-      else if (cursor == 0) (direction = 1), (timeout = 2000);
-      else if (direction == 1) timeout = 100 + Math.floor(Math.random() * 100);
-      else if (direction == -1) timeout = 50;
-      cursor += direction;
+   function typeText() {
+      let line = 0,
+         count = 0,
+         direct = 1,
+         dalay = 400,
+         out = "",
+         htmlOut = document.querySelector(".out");
 
-      setTimeout(makeStep, timeout);
+      function typeLine() {
+         //рисуем строку
+         setTimeout(() => {
+            out = t[line].slice(0, count);
+            htmlOut.innerHTML = out + "<span>|</span>";
+            count += direct;
+
+            if (count >= t[line].length) {
+               direct = -1;
+               dalay = dalay / 4;
+            }
+            if (count == 0 && direct == -1) {
+               direct = 1;
+               dalay = dalay * 4;
+               if (line == 0) {
+                  line = 1;
+               } else if (line == 1) {
+                  line = 0;
+               }
+            }
+            typeLine();
+         }, getRandomInt(getRandomInt(dalay * 3.0)));
+      }
+      typeLine();
    }
 
-   makeStep();
+   function getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+   }
+
+   typeText();
 });

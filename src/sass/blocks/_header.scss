@@ -3,11 +3,26 @@
    background: url("../../img/home_bg.JPG") top center/cover no-repeat;
    color: #fff;
    padding: 10rem 1rem;
+   h2 {
+      @include h2-style;
+   }
    h1 {
       @include h1-style;
    }
-   h2 {
-      @include h2-style;
+
+   .out span {
+      color: $main-color;
+      background: $main-color;
+      animation: blinking 0.5s step-start infinite;
+   }
+
+   @keyframes blinking {
+      50% {
+         opacity: 1;
+      }
+      100% {
+         opacity: 0;
+      }
    }
 
    ul {
